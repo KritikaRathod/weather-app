@@ -24,6 +24,13 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+.app-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 
 .search {
   display: flex;
