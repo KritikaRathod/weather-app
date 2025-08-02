@@ -19,19 +19,10 @@ async function checweather(city) {
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
-    let weather = data.weather[0].main;
+    let iconCode = data.weather[0].icon;
+weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+weatherIcon.alt = data.weather[0].description;
 
-    if (weather == "Clouds") {
-      weatherIcon.src = "weather-app-img/images/clouds.png";
-    } else if (weather == "Rain") {
-      weatherIcon.src = "weather-app-img/images/rain.png";
-    } else if (weather == "Drizzle") {
-      weatherIcon.src = "weather-app-img/images/drizzle.png";
-    } else if (weather == "Mist") {
-      weatherIcon.src = "weather-app-img/images/mist.png";
-    } else if (weather == "Clear") {
-      weatherIcon.src = "weather-app-img/images/clear.png";
-    }
 
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
